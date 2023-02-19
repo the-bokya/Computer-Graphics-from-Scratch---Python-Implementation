@@ -23,9 +23,9 @@ class light_object:
       L = self.position - P
     if self.type == "directional":
       L = self.direction
-    out = np.dot(P, L) 
+    out = np.dot(N, L) 
     out = max(0, out)
-    out /= (np.linalg.norm(P) * np.linalg.norm(L))
+    out /= (np.linalg.norm(N) * np.linalg.norm(L))
     out *= self.intensity
     return out
 
@@ -96,5 +96,4 @@ for x in range(-width//2, width//2):
     D = screen.canvas_to_viewport(x, y)
     color = trace_ray(O, D, 1, np.inf)
     screen.put_pixel(x, y, color)
-
 screen.show()
