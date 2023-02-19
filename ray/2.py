@@ -87,8 +87,8 @@ def intersection (O, D, sphere):
   t2 = (-b - np.sqrt(determinant)) / 2*a
   return np.array ([t1, t2])
 
-width = 256
-height = 256
+width = 1024
+height = 1024
 screen = canvas (width, height)
 
 for x in range(-width//2, width//2):
@@ -97,3 +97,4 @@ for x in range(-width//2, width//2):
     color = trace_ray(O, D, 1, np.inf)
     screen.put_pixel(x, y, color)
 screen.show()
+screen.save("2.jpeg")
