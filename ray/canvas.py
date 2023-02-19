@@ -21,6 +21,10 @@ class canvas:
   def show(self):
     image = Im.fromarray(self.pixels)
     image.show()
+  
+  def save(self, name):
+    image = Im.fromarray(self.pixels)
+    image.save(name)
 
 if __name__ == "__main__":
   image = canvas(1920, 1080)

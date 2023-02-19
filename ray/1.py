@@ -55,3 +55,4 @@ def ying():
 for x in range(-width//2, width//2):
   ying()
 screen.show()
+screen.save("1.jpeg")
