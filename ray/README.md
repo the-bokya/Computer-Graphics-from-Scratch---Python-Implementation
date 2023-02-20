@@ -4,4 +4,4 @@ This folder contains the raytraced renderings from the book.
 
 ## Example
 
-![Rendering using diffusion](./2.jpeg "Rendering using diffusion")
+![Rendering using specular](./2.jpeg "Rendering using specular")
