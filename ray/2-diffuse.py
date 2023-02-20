@@ -25,7 +25,7 @@ class light_object:
       L = self.direction
     out = np.dot(N, L) 
     out = max(0, out)
-    out /= (np.linalg.norm(N) * np.linalg.norm(L))
+    out /= (np.linalg.norm(L))
     out *= self.intensity
     return out
 
@@ -87,8 +87,8 @@ def intersection (O, D, sphere):
   t2 = (-b - np.sqrt(determinant)) / 2*a
   return np.array ([t1, t2])
 
-width = 1024
-height = 1024
+width = 64
+height = 64
 screen = canvas (width, height)
 
 for x in range(-width//2, width//2):
@@ -97,4 +97,4 @@ for x in range(-width//2, width//2):
     color = trace_ray(O, D, 1, np.inf)
     screen.put_pixel(x, y, color)
 screen.show()
-screen.save("2.jpeg")
+#screen.save("2.jpeg")
